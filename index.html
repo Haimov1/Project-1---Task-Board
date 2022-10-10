@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/favIcon/favicon.ico">
+    <title>Task Board</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+
+</head>
+
+<body>
+    <h1>Task Board</h1>
+
+    <div class="boxForm">
+        <form onsubmit="addTask()">
+            <label>Description: </label><br />
+            <textarea id="descriptionTextBox" placeholder="Enter Description" minlength="4" required></textarea><br />
+
+            <label>Date & Time</label><br />
+            <input onchange="getDateValueFromClient()" type="date" id="dateBox" required><br />
+            <input onchange="getTimeValueFromClient()" type="time" id="timeBox" required>
+
+            <div id="errorDiv"></div>
+
+            <button class="btn btn-outline-dark">Add Task</button>
+            <button class="btn btn-outline-dark" type="reset" onclick="clearFrom()">Clear Task</button>
+        </form>
+    </div>
+
+    <div id="taskDiv"></div>
+</body>
+
+</html>

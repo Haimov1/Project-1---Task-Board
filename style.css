@@ -1,0 +1,128 @@
+body {
+    background-image: url(./assets/image/Background-image.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+@font-face {
+    font-family: TitleFonts;
+    src: url(./assets/fonts/Cherie_DEMO.ttf);
+}
+
+h1 {
+    font-family: TitleFonts;
+    text-align: center;
+    font-size: 50px;
+    color: black;
+    margin-top: 10px;
+}
+
+.boxForm {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    background-image: url(./assets/image/Form-image.jpeg);
+    width: 350px;
+    height: 280px;
+    border-radius: 15px;
+    background-size: cover;
+    text-align: center;
+    font-size: 17px;
+    color: aliceblue;
+}
+
+label {
+    font-weight: 500;
+}
+
+input,
+textarea {
+    width: 300px;
+    font-size: 18px;
+    border-radius: 9px;
+    background: whitesmoke;
+    margin: 5px;
+    resize: none;
+    text-align: center;
+    border: 1px solid black;
+}
+
+#taskDiv {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+#description {
+    text-align: center;
+    height: 100px;
+    overflow: auto;
+    word-wrap: break-word;
+}
+
+#date {
+    font-size: 13px;
+    float: left;
+    padding-left: 25px;
+}
+
+#time {
+    font-size: 13px;
+    float: right;
+    padding-right: 20px;
+}
+
+.btn-close {
+    display: none;
+    float: right;
+    margin-top: -15px;
+    margin-right: 10px;
+    font-size: 22px;
+    border: none;
+    height: 0px;
+}
+
+#boxDiv:hover .btn-close {
+    display: block;
+}
+
+#errorDiv {
+    color: red;
+    text-align: center;
+    height: 30px;
+}
+
+.btn-outline-dark {
+    color: white;
+    border-color: white;
+}
+
+#boxDiv {
+    height: 180px;
+    width: 180px;
+    margin: 20px;
+}
+
+#boxDiv:first-child {
+    animation-name: fadeInNote;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+}
+
+@keyframes fadeInNote {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#boxDiv:hover {
+    transform: scale(1.1, 1.1);
+}
